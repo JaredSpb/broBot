@@ -47,7 +47,7 @@ Each module provides 'walker' property. It contains code doing all the real job.
 * .clear() - marks current module as non-active. You should refresh the page to start next 'clean' loop.
 * .set() - resets the counter, but doesnt run any actions. You may just refresh the page, or call itterate() to start current sequence over.
 
-Module walker may provide the 'pre' property containing anonymous function. If this property is defined broBot will execute that function before current action. If true value is returned, action is beeing run. Otherwise broBot will skip current action and refresh the page. That starts the next loop and usualy leads to execution of 'pre' again and probably run next action. Pre is executed in the same 'walker' context as actions are and may use described above walker methods.
+Module walker may provide the 'pre' property containing anonymous function. If this property is defined broBot will execute that function before current action. If true value is returned, action is beeing run. Otherwise broBot will skip current action and refresh the page. That starts the next loop and usualy leads to execution of 'pre' again and probably run next action. Pre is executed in the same 'walker' context as actions are and may use walker methods described above.
 
 
 ### Simple example
@@ -145,4 +145,4 @@ broBot.modules.register('myModule', {
 
 ### Real example
 
-'example.user.js' file contains real bot. It walks through 'javascript' tagged questions from stackoverflow index page and counts links at those questions' bodies. This functionality is absolutely useless. But not the bot itself - use it as an example. 'example' contains this bot splitted in individual files. '10-broBot-module-countJSQuestionsLinks.js' - is the only module there.
+'example.user.js' file contains real bot. It walks through 'javascript' tagged questions from stackoverflow index page and counts links at those questions bodies. This functionality is absolutely useless. But not the bot itself - use it as an example. 'example' contains this bot splitted in individual files. '10-broBot-module-countJSQuestionsLinks.js' - is the only module there.
