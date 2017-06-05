@@ -146,3 +146,8 @@ broBot.modules.register('myModule', {
 ### Real example
 
 'example.user.js' file contains real bot. It walks through 'javascript' tagged questions from stackoverflow index page and counts links at those questions bodies. This functionality is absolutely useless. But not the bot itself - use it as an example. 'example' contains this bot splitted in individual files. '10-broBot-module-countJSQuestionsLinks.js' - is the only module there.
+
+### UI
+
+broBot does not provide anything to build end user interface. Any settings, data or timers are hidden in the deapths of localStorage. You can add your own UI building js file to your bot directory if necessary.
+
